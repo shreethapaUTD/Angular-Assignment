@@ -1,0 +1,21 @@
+.navbar navbar-default{
+    color: #555;
+    background-color: #e7e7e7;
+    font-size: 27px;
+}
+.form-control {
+    display: block;
+    width: 14%;
+    height: 47px;
+    padding: 14px 43px;
+    font-size: 16px;
+    line-height: -2.571429;
+    color: #555;
+    background-color: #fbfbfb;
+    background-image: none;
+    border: 1px solid #d4cdcd;
+}
+
+navbar-fixed-top {
+    height: 45px; /* Whatever you want. */
+}

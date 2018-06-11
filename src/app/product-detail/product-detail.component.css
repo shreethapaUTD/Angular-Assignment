@@ -1,0 +1,16 @@
+.jumbotron{
+    color: inherit;
+    text-align: center;
+    color:#4c5379;
+   
+}
+
+.ui-panel-images{
+width:100%;
+height: 300px;    
+}
+
+.align{
+    width:100%;
+    margin-left:16%;
+}
