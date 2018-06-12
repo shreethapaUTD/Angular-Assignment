@@ -1,25 +1,15 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <a class="navbar-brand">{{pageTitle}}</a>
-        <ul class="nav navbar-nav">
-            <li routerLinkActive="active">
-                <a routerLink=''>Home</a>
-            </li>
-            <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-                <a routerLink='/product-detail'>Product</a>
-            </li>
-         
-        </ul>
-        
-  
-  
-  
-  
-
-    </div>
-    
- 
-  </nav>
-  
-  
-    <router-outlet></router-outlet>
+<nav class="navbar navbar-default" style="margin:0;padding:0">
+        <div class="container-fluid">
+            <a class="navbar-brand">{{pageTitle}}</a>
+            <ul class="nav navbar-nav">
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <a routerLink='' >Home</a>
+                </li>
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <a routerLink='/product-detail'>Product</a>
+                </li>         
+            </ul>   
+        </div>       
+      </nav>
+      
+ <router-outlet></router-outlet>

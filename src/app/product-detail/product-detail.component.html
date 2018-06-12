@@ -1,35 +1,42 @@
 <div class="jumbotron" >
   
-  <h1>Duvet Covers</h1>
-</div>
-
-<div class="container">
-  <div class="row" >
-    <div class="col-md-4" *ngFor="let p of product;let i=index;">
-      <div class="thumbnail">
-        <img src="{{p.hero.href}}" alt="" width="363" (click)="showCrousel(p,i,p.name)">
-        <div class="caption">
-          <p class="text-muted">
-            {{p.name}}
-          </p>
-          <p>{{p.priceRange.selling.low | currency}} - {{p.priceRange.selling.high | currency}} </p>
+    <h1>Duvet Covers</h1>
+    <div class="row">
+      <div class="center-block" style="width:20%">
+         <input type="text" class="form-control" (keyup)="search($event)" placeholder="Search you Favorite Products">
+      </div>
+      <p class="text-right p-align" *ngIf="totalItem>0"> {{totalItem}} Matching Result</p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row" >
+      <div class="col-md-4" *ngFor="let p of product;let i=index;">
+        <div class="thumbnail">
+          <img src="{{p.hero.href}}" alt="" width="363" (click)="showCrousel(p,i,p.name)">
+          <div class="caption">
+            <p class="text-muted">
+              {{p.name}}
+            </p>
+            <p id="price">{{p.priceRange.selling.low | currency}} - {{p.priceRange.selling.high | currency}} </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-<p-dialog [(visible)]="display" [width]="900" [height]="600" >
-  <p-header>
-   {{productName}}
-  </p-header>
-    <div class="align">
-      <p-galleria [images]="images"  [autoPlay]="false" panelWidth="500" panelHeight="313" [showCaption]="true"></p-galleria>
-
-    </div>  
-    
-  <p-footer>
-      <button (click)="display=false">Close</button>
-  </p-footer>
-</p-dialog>
-
+  
+  <p-dialog [(visible)]="display" [width]="700" [height]="500" >
+    <p-header>
+     {{productName}}
+    </p-header>
+      <div class="align">
+        <p-galleria [images]="images"  [autoPlay]="false" panelWidth="500" panelHeight="313" [showCaption]="true"></p-galleria>
+  
+      </div>  
+      
+    <p-footer>
+        <button class="btn btn-sm btn-primary" (click)="display=false">Close</button>
+    </p-footer>
+  </p-dialog>
+  
+  

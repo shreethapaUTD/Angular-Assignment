@@ -12,5 +12,14 @@ height: 300px;
 
 .align{
     width:100%;
-    margin-left:16%;
+    margin-left:14%;
+}
+
+.ui-dialog .ui-dialog-content{
+    overflow: hidden !important;
+}
+
+.p-align{
+    width: 55%;
+    padding-top: 8px;
 }
